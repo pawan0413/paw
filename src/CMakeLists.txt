@@ -58,7 +58,7 @@ add_executable(PaymentGateService ${PaymentGateService})
 add_executable(Miner ${Miner})
 
 if (MSVC)
-  target_link_libraries(System ws2_32)
+  target_link_libraries(ConnectivityTool CryptoNoteCore Logging Crypto P2P Rpc Http Serialization Common System ${Boost_LIBRARIES})
 endif ()
 
 target_link_libraries(ConnectivityTool CryptoNoteCore Common Logging Crypto P2P Rpc Http Serialization System ${Boost_LIBRARIES})
